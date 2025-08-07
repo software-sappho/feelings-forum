@@ -1,0 +1,20 @@
+:root {
+    --background-colour: #c8d5b9;
+    --title-colour:#000000;
+}
+
+/* Dark Theme Overrides */
+[data-theme="dark"] {
+    --background-colour: #2A331F;
+    --title-colour:#ffffff;
+}
+
+body {
+    background-color: var(--background-colour);
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1{
+    color: var(--title-colour)
+}

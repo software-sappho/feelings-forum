@@ -6,9 +6,11 @@ import (
 )
 
 func main() {
-	log.Println("✨ Server humming softly, waiting for your truths.")
+	log.Println("✨ Server humming softly, waiting for your truths at http://localhost:8080")
 
-	err := http.ListenAndServe(":8080", nil)
+	router := NewRouter()
+
+	err := http.ListenAndServe(":8080", router)
 	if err != nil {
 		log.Fatal(err)
 	}
