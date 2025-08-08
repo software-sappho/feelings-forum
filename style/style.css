@@ -1,18 +1,18 @@
 :root {
-    --background-colour: #c8d5b9;
+    --background-colour: #db94ec;
     --title-colour:#000000;
 }
 
 /* Dark Theme Overrides */
 [data-theme="dark"] {
-    --background-colour: #2A331F;
+    --background-colour: #29093f;
     --title-colour:#ffffff;
 }
 
 body {
     background-color: var(--background-colour);
 
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.9s ease, color 0.9s ease;
 }
 
 h1{
