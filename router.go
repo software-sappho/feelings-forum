@@ -14,10 +14,11 @@ func NewRouter() *http.ServeMux {
 	mux.Handle("/style/", http.StripPrefix("/style/", http.FileServer(http.Dir("style"))))
 	mux.Handle("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("js"))))
 
+	mux.HandleFunc("/register", registerHandler)
+
 	return mux
 }
 
-
 func homeHandler(w http.ResponseWriter, r *http.Request) {
-	http.ServeFile(w, r, "index.html")
+	http.ServeFile(w, r, "./templates/index.html")
 }
