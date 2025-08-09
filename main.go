@@ -1,6 +1,7 @@
 package main
 
 import (
+	"forum/db"
 	"log"
 	"net/http"
 	"os"
@@ -11,6 +12,10 @@ func main() {
 
 	if port == "" {
 		port = "8080" // fallback for local dev
+	}
+
+	if err := database.InitDB(); err != nil {
+		log.Fatal(err)
 	}
 
 	log.Printf("✨ Server humming softly, waiting for your truths at http://localhost:%s", port)
